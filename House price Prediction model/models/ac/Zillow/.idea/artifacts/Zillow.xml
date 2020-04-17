@@ -1,0 +1,25 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="Zillow">
+    <output-path>$PROJECT_DIR$/out/artifacts/Zillow</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="zillowbot.Main" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="Zillow.jar">
+        <element id="module-output" name="Zillow" />
+        <element id="library" level="project" name="commons-io-2.6" />
+        <element id="library" level="project" name="ini4j-0.5.4" />
+        <element id="library" level="project" name="java-json" />
+        <element id="library" level="project" name="jsoup-1.9.2" />
+        <element id="library" level="project" name="sqlite-jdbc-3.20.0" />
+      </element>
+    </root>
+  </artifact>
+</component>

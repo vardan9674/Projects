@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.geometry.Insets?>
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zillowbot.Forms.ControllerEstate">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" maxHeight="150">
+        <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <children>
+            <HBox spacing="5">
+                <padding>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                </padding>
+                <Label fx:id="lbl_ZPID" text="ZPID" minWidth="28">
+                    <font>
+                        <Font name="System Bold"/>
+                    </font>
+                </Label>
+                <TextField fx:id="txt_ZPID"/>
+                <Label fx:id="lbl_Type" text="Type" minWidth="28">
+                    <font>
+                        <Font name="System Bold"/>
+                    </font>
+                </Label>
+                <TextField fx:id="txt_Type"/>
+                <Label fx:id="lbl_State" text="State" minWidth="30">
+                    <font>
+                        <Font name="System Bold"/>
+                    </font>
+                </Label>
+                <TextField fx:id="txt_State"/>
+                <Label fx:id="lbl_Locality" text="Locality" minWidth="44">
+                    <font>
+                        <Font name="System Bold"/>
+                    </font>
+                </Label>
+                <TextField fx:id="txt_Locality"/>
+            </HBox>
+            <HBox spacing="5">
+                <padding>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                </padding>
+                <Label fx:id="lbl_ZipCode" text="Zip Code" minWidth="52">
+                    <font>
+                        <Font name="System Bold"/>
+                    </font>
+                </Label>
+                <TextField fx:id="txt_ZipCode" minWidth="65"/>
+                <Label fx:id="lbl_Address" text="Address" minWidth="46">
+                    <font>
+                        <Font name="System Bold"/>
+                    </font>
+                </Label>
+                <TextField fx:id="txt_Address" minWidth="150" prefWidth="500"/>
+                <Label fx:id="lbl_Latitude" text="Latitude" minWidth="47">
+                    <font>
+                        <Font name="System Bold"/>
+                    </font>
+                </Label>
+                <TextField fx:id="txt_Latitude" minWidth="65" maxWidth="150"/>
+                <Label fx:id="lbl_Longitude" text="Longitude" minWidth="58">
+                    <font>
+                        <Font name="System Bold"/>
+                    </font>
+                </Label>
+                <TextField fx:id="txt_Longitude" minWidth="65" maxWidth="150"/>
+            </HBox>
+            <HBox spacing="5">
+                <padding>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                </padding>
+                <Label fx:id="lbl_Price" text="Price" minWidth="28">
+                    <font>
+                        <Font name="System Bold"/>
+                    </font>
+                </Label>
+                <TextField fx:id="txt_Price" minWidth="65"/>
+                <Label fx:id="lbl_Options" text="Options" minWidth="46">
+                    <font>
+                        <Font name="System Bold"/>
+                    </font>
+                </Label>
+                <TextField fx:id="txt_Options" minWidth="150" prefWidth="500"/>
+                <Label fx:id="lbl_Bedrooms" text="Bedrooms" minWidth="58">
+                    <font>
+                        <Font name="System Bold"/>
+                    </font>
+                </Label>
+                <TextField fx:id="txt_Bedrooms" minWidth="65" maxWidth="150"/>
+                <Label fx:id="lbl_Bathrooms" text="Bathrooms" minWidth="62">
+                    <font>
+                        <Font name="System Bold"/>
+                    </font>
+                </Label>
+                <TextField fx:id="txt_Bathrooms" minWidth="65" maxWidth="150"/>
+            </HBox>
+            <HBox spacing="5">
+                <padding>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                </padding>
+                <Label fx:id="lbl_AreaSpace_SQFT" text="AreaSpace(sqft)" minWidth="90">
+                    <font>
+                        <Font name="System Bold"/>
+                    </font>
+                </Label>
+                <TextField fx:id="txt_AreaSpace_SQFT" minWidth="65"/>
+                <Label fx:id="lbl_Status" text="Status" minWidth="36">
+                    <font>
+                        <Font name="System Bold"/>
+                    </font>
+                </Label>
+                <TextField fx:id="txt_Status" minWidth="120" prefWidth="200"/>
+                <Label fx:id="lbl_Description" text="Description" minWidth="65">
+                    <font>
+                        <Font name="System Bold"/>
+                    </font>
+                </Label>
+                <TextField fx:id="txt_Description" minWidth="120" prefWidth="1000"/>
+                <Label fx:id="lbl_CardBadge" text="Card badge" minWidth="65">
+                    <font>
+                        <Font name="System Bold"/>
+                    </font>
+                </Label>
+                <TextField fx:id="txt_CardBadge" minWidth="120"/>
+            </HBox>
+        </children>
+    </VBox>
+    </AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+        <HBox prefHeight="200.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <VBox prefHeight="200.0" prefWidth="609.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" HBox.hgrow="ALWAYS">
+                <children>
+                    <SplitPane fx:id="splitPane_data" dividerPositions="0.2, 0.3, 0.4, 0.5, 0.6" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+                        <items>
+                            <AnchorPane fx:id="anchor_ForRent" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+                                <children>
+                                    <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                        <Label fx:id="lbl_ForRent" text="For Rent">
+                                            <font>
+                                                <Font name="System Bold" />
+                                            </font>
+                                        </Label>
+                                        <TableView fx:id="grid_ForRent" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" VBox.vgrow="ALWAYS">
+                                            <columns>
+                                                <TableColumn fx:id="col_FR_Type" prefWidth="75.0" text="Type" />
+                                                <TableColumn fx:id="col_FR_Bathrooms" prefWidth="75.0" text="Bathrooms" />
+                                                <TableColumn fx:id="col_FR_AreaSpace" prefWidth="75.0" text="Area Space" />
+                                                <TableColumn fx:id="col_FR_Price" prefWidth="75.0" text="Price" />
+                                            </columns>
+                                        </TableView>
+                                    </VBox>
+                                </children>
+                            </AnchorPane>
+                            <AnchorPane fx:id="anchor_ForSale" minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="100.0" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+                                <children>
+                                    <VBox prefHeight="160.0" prefWidth="54.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                        <Label fx:id="lbl_ForSale" text="For Sale">
+                                            <font>
+                                                <Font name="System Bold" />
+                                            </font>
+                                        </Label>
+                                        <TableView fx:id="grid_ForSale" prefHeight="140" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+                                            <columns>
+                                                <TableColumn fx:id="col_FS_Type" prefWidth="75.0" text="Type" />
+                                                <TableColumn fx:id="col_FS_Bathrooms" prefWidth="75.0" text="Bathrooms" />
+                                                <TableColumn fx:id="col_FS_AreaSpace" prefWidth="75.0" text="Area Space" />
+                                                <TableColumn fx:id="col_FS_Price" prefWidth="75.0" text="Price" />
+                                            </columns>
+                                        </TableView>
+                                    </VBox>
+                                </children>
+                            </AnchorPane>
+                            <AnchorPane fx:id="anchor_School" minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="100.0" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+                                <children>
+                                    <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                        <Label fx:id="lbl_School" text="Schools">
+                                            <font>
+                                                <Font name="System Bold" />
+                                            </font>
+                                        </Label>
+                                        <TableView fx:id="grid_School" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" VBox.vgrow="ALWAYS">
+                                            <columns>
+                                                <TableColumn fx:id="col_School_Name" prefWidth="75.0" text="Name" />
+                                                <TableColumn fx:id="col_School_Grades" prefWidth="75.0" text="Grades" />
+                                                <TableColumn fx:id="col_School_Distance" prefWidth="75.0" text="Distance" />
+                                            </columns>
+                                        </TableView>
+                                    </VBox>
+                                </children>
+                            </AnchorPane>
+                            <AnchorPane fx:id="anchor_KV1" minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="100.0" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+                                <children>
+                                <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <Label fx:id="lbl_KV1" text="">
+                                        <font>
+                                            <Font name="System Bold" />
+                                        </font>
+                                    </Label>
+                                    <TableView fx:id="grid_KV1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" VBox.vgrow="ALWAYS">
+                                        <columns>
+                                            <TableColumn fx:id="col_KV1_Key" prefWidth="75.0" text="" />
+                                            <TableColumn fx:id="col_KV1_Value" prefWidth="75.0" text="" />
+                                        </columns>
+                                    </TableView>
+                                </VBox>
+                            </children>
+                            </AnchorPane>
+                            <AnchorPane fx:id="anchor_KV2" minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="100.0" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+                                <children>
+                                    <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" VBox.vgrow="ALWAYS">
+                                        <Label fx:id="lbl_KV2" text="">
+                                            <font>
+                                                <Font name="System Bold" />
+                                            </font>
+                                        </Label>
+                                        <TableView fx:id="grid_KV2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" VBox.vgrow="ALWAYS">
+                                            <columns>
+                                                <TableColumn fx:id="col_KV2_Key" prefWidth="75.0" text="" />
+                                                <TableColumn fx:id="col_KV2_Value" prefWidth="75.0" text="" />
+                                            </columns>
+                                        </TableView>
+                                    </VBox>
+                                </children>
+                            </AnchorPane>
+                            <AnchorPane fx:id="anchor_KV3" minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="100.0" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+                                <children>
+                                    <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                        <Label fx:id="lbl_KV3" text="">
+                                            <font>
+                                                <Font name="System Bold" />
+                                            </font>
+                                        </Label>
+                                        <TableView fx:id="grid_KV3" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" VBox.vgrow="ALWAYS">
+                                            <columns>
+                                                <TableColumn fx:id="col_KV3_Key" prefWidth="75.0" text="" />
+                                                <TableColumn fx:id="col_KV3_Value" prefWidth="75.0" text="" />
+                                            </columns>
+                                        </TableView>
+                                    </VBox>
+                                </children>
+                            </AnchorPane>
+                        </items>
+                    </SplitPane>
+                </children>
+            </VBox>
+        </HBox>
+    </AnchorPane>
+</SplitPane>

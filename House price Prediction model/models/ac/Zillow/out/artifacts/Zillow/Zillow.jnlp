@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Zillow.jnlp">
+  <information>
+    <title>Zillow</title>
+    <vendor>Unknown</vendor>
+    <description>Zillow</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Zillow.jar" size="2048585" download="eager" />
+    <jar href="commons-io-2.6.jar" size="214788" download="eager" />
+    <jar href="ini4j-0.5.4.jar" size="102220" download="eager" />
+    <jar href="java-json.jar" size="84697" download="eager" />
+    <jar href="jsoup-1.9.2.jar" size="319050" download="eager" />
+    <jar href="sqlite-jdbc-3.20.0.jar" size="6637012" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="600" height="400" main-class="zillowbot.Main"  name="Zillow" />
+  <update check="background"/>
+</jnlp>

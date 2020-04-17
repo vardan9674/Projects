@@ -1,0 +1,31 @@
+create database MyDB;
+
+CREATE TABLE finalproj(
+Year int(5),
+StateAbbr varchar(100),
+StateDesc varchar(100),
+CityName varchar(100),
+GeographicLevel varchar(100),
+DataSource varchar(10),
+Category varchar(20),
+UniqueID int(25),
+Measure varchar(100),
+Data_Value_Unit varchar(2),
+DataValueTypeID varchar(10),
+Data_Value_Type varchar(25),
+Data_Value float(10),
+Low_Confidence_Limit float(10),
+High_Confidence_Limit float(10),
+PopulationCount int(15),
+GeoLocation varchar(50),
+CategoryID varchar(10),
+MeasureID varchar(10),
+CityFIPS int(10),
+TractFIPS int(20),
+Short_Question_Text varchar(50)
+);
+
+desc finalproj;
+
+insert into finalproj values(2015,'AL','Alabama','Birmingham','City','BRFSS','Prevention',107000,'Current lack of health insurance among adults aged 18â€“64 Years',
+'%','AgeAdjPrv','Age-adjusted prevalence',19.8,19.5,20.2,212237,'(33.5275663773, -86.7988174678)','PREVENT','ACCESS2',107000,0,'Health Insurance');

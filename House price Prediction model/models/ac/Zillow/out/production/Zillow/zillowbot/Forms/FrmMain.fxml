@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.Pane?>
+<TabPane tabClosingPolicy="UNAVAILABLE" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zillowbot.Forms.ControllerMain">
+   <tabs>
+      <Tab text="Zillow Bot">
+         <content>
+            <AnchorPane>
+               <VBox AnchorPane.rightAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0">
+                  <children>
+                     <HBox prefHeight="30.0" prefWidth="600.0" spacing="5.0">
+                        <children>
+                           <RadioButton fx:id="rb_State" mnemonicParsing="false" text="State">
+                              <toggleGroup>
+                                 <ToggleGroup fx:id="ZipChoice" />
+                              </toggleGroup></RadioButton>
+                           <ComboBox fx:id="cmb_Estate" prefWidth="150.0" />
+                           <RadioButton fx:id="rb_Custom" mnemonicParsing="false" selected="true" text="Custom Zip Code (coma seperated)" toggleGroup="$ZipChoice">
+                              <padding>
+                                 <Insets left="20.0" />
+                              </padding>
+                           </RadioButton>
+                           <TextField fx:id="txt_customZipCodes" prefHeight="25.0" prefWidth="172.0" />
+                           <RadioButton fx:id="rb_PrevRequest" layoutX="223.0" layoutY="15.0" mnemonicParsing="false" text="Previous request" toggleGroup="$ZipChoice">
+                              <padding>
+                                 <Insets left="20.0" />
+                              </padding>
+                           </RadioButton>
+                           <ComboBox fx:id="cmb_Request" layoutX="51.0" layoutY="15.0" prefWidth="150.0" />
+                        </children>
+                        <padding>
+                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </padding></HBox>
+                     <HBox VBox.vgrow="ALWAYS">
+                        <children>
+                           <SplitPane dividerPositions="0.05" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+                              <items>
+                                 <TextArea fx:id="txtArea_Info" prefHeight="2000.0" prefWidth="200.0" />
+                                 <VBox>
+                                    <children>
+                                       <HBox fx:id="hbox_btns" spacing="5.0" VBox.vgrow="SOMETIMES">
+                                          <padding>
+                                             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                          </padding>
+                                          <children>
+                                             <Button fx:id="btn_phaseOneStart" mnemonicParsing="false" onAction="#phaseOneStart" prefHeight="25.0" prefWidth="150.0" text="Start phase 1">
+                                                <graphic>
+                                                   <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                      <image>
+                                                         <Image url="@resume.png" />
+                                                      </image>
+                                                   </ImageView>
+                                                </graphic>
+                                             </Button>
+                                             <Button fx:id="btn_phaseOnePauseAndResume" mnemonicParsing="false" onAction="#phaseOnePauseAndResume" prefHeight="25.0" prefWidth="100.0" text="Pause" visible="false">
+                                                <graphic>
+                                                   <ImageView fx:id="img_pauseResume" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                      <image>
+                                                         <Image url="@pause.png" />
+                                                      </image>
+                                                   </ImageView>
+                                                </graphic>
+                                             </Button>
+                                             <Button fx:id="btn_phaseOneCancel" mnemonicParsing="false" onAction="#phaseOneCancel" prefHeight="25.0" prefWidth="100.0" text="Cancel" visible="false">
+                                                <graphic>
+                                                   <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                      <image>
+                                                         <Image url="@cancel.png" />
+                                                      </image>
+                                                   </ImageView>
+                                                </graphic>
+                                             </Button>
+                                             <Button fx:id="btn_phaseTwoStart" mnemonicParsing="false" onAction="#phaseTwoStart" prefHeight="25.0" prefWidth="150.0" text="Start Phase 2">
+                                                <graphic>
+                                                   <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                      <image>
+                                                         <Image url="@resume.png" />
+                                                      </image>
+                                                   </ImageView>
+                                                </graphic>
+                                             </Button>
+                                             <Button fx:id="btn_phaseTwoPauseAndResume" mnemonicParsing="false" onAction="#phaseTwoPauseAndResume" prefHeight="25.0" prefWidth="100.0" text="Pause" visible="false">
+                                                <graphic>
+                                                   <ImageView fx:id="img_pauseResume2" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                      <image>
+                                                         <Image url="@pause.png" />
+                                                      </image>
+                                                   </ImageView>
+                                                </graphic>
+                                             </Button>
+                                             <Button fx:id="btn_phaseTwoCancel" mnemonicParsing="false" onAction="#phaseTwoCancel" prefHeight="25.0" prefWidth="100.0" text="Cancel" visible="false">
+                                                <graphic>
+                                                   <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                      <image>
+                                                         <Image url="@cancel.png" />
+                                                      </image>
+                                                   </ImageView>
+                                                </graphic>
+                                             </Button>
+                                             <Button fx:id="btn_CalcSetting" mnemonicParsing="false" onAction="#showCalcSetting" prefHeight="25.0" prefWidth="160.0" text="Calculator Setting" visible="true">
+                                                <graphic>
+                                                   <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                      <image>
+                                                         <Image url="@calculatorSetting.png" />
+                                                      </image>
+                                                   </ImageView>
+                                                </graphic>
+                                             </Button>
+                                             <Button fx:id="btn_Calculator" mnemonicParsing="false" onAction="#showCalculator" prefHeight="25.0" prefWidth="130.0" text="Calculator" visible="true">
+                                                <graphic>
+                                                   <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                      <image>
+                                                         <Image url="@calculator.png" />
+                                                      </image>
+                                                   </ImageView>
+                                                </graphic>
+                                             </Button>
+                                             <Button fx:id="btn_RunCalculation" mnemonicParsing="false" onAction="#runCalculation" prefHeight="25.0" prefWidth="150.0" text="Run Calculation" visible="true">
+                                                <graphic>
+                                                   <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                      <image>
+                                                         <Image url="@calculatorRun.png" />
+                                                      </image>
+                                                   </ImageView>
+                                                </graphic>
+                                             </Button>
+                                             <Button mnemonicParsing="false" onAction="#test" text="Test" visible="true"/>
+                                             <ImageView fx:id="img_pause" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                                <image>
+                                                   <Image url="@pause.png" />
+                                                </image>
+                                             </ImageView>
+                                             <ImageView fx:id="img_resume" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                                <image>
+                                                   <Image url="@resume.png" />
+                                                </image>
+                                             </ImageView>
+                                          </children>
+                                       </HBox>
+                                       <HBox fx:id="hbox_progressbar" prefHeight="15.0" prefWidth="674.0" spacing="5.0" visible="false" VBox.vgrow="SOMETIMES">
+                                          <children>
+                                             <VBox prefHeight="300.0" prefWidth="100.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                                                <children>
+                                                   <ProgressBar fx:id="pb_master" prefWidth="2000.0" progress="0.0" />
+                                                   <ProgressBar fx:id="pb_detail" prefWidth="2000.0" progress="0.0" />
+                                                </children>
+                                             </VBox>
+                                          </children>
+                                          <padding>
+                                             <Insets bottom="5.0" top="5.0" />
+                                          </padding>
+                                       </HBox>
+                                       <HBox fx:id="hbox_search" prefHeight="15.0" spacing="5" VBox.vgrow="SOMETIMES">
+                                          <padding>
+                                             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                          </padding>
+                                          <children>
+                                             <TextField fx:id="txt_search" prefHeight="25.0" prefWidth="300.0" HBox.hgrow="ALWAYS" />
+                                             <Button fx:id="btn_search" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="100.0" text="Search">
+                                                <graphic>
+                                                   <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                      <image>
+                                                         <Image url="@search.png" />
+                                                      </image>
+                                                   </ImageView>
+                                                </graphic>
+                                             </Button>
+                                          </children>
+                                       </HBox>
+                                       <SplitPane dividerPositions="0.23, 0.77" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+                                          <items>
+                                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                                <children>
+                                                   <TableView fx:id="grid_ZipCodes" prefHeight="200.0" prefWidth="350.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                      <columns>
+                                                         <TableColumn fx:id="col_EZipCode" prefWidth="55.0" text="ZipCode" />
+                                                         <TableColumn fx:id="col_EPrimaryCity" prefWidth="80.0" text="Primary City" />
+                                                         <TableColumn fx:id="col_EStatus" prefWidth="120.0" text="Status" />
+                                                      </columns>
+                                                   </TableView>
+                                                </children>
+                                             </AnchorPane>
+                                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                                <children>
+                                                   <TableView fx:id="grid_Estates" prefHeight="100.0" prefWidth="424.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                      <columns>
+                                                         <TableColumn fx:id="col_ZPID" prefWidth="75.0" text="ZPID" />
+                                                         <TableColumn fx:id="col_Type" prefWidth="75.0" text="Type" />
+                                                         <TableColumn fx:id="col_State" prefWidth="75.0" text="State" />
+                                                         <TableColumn fx:id="col_Locality" prefWidth="75.0" text="Locality" />
+                                                         <TableColumn fx:id="col_Address" prefWidth="75.0" text="Address" />
+                                                         <TableColumn fx:id="col_ZipCode" prefWidth="75.0" text="ZipCode" />
+                                                         <TableColumn fx:id="col_Latitude" prefWidth="75.0" text="Latitude" />
+                                                         <TableColumn fx:id="col_Longitude" prefWidth="75.0" text="Longitude" />
+                                                         <TableColumn fx:id="col_Price" prefWidth="75.0" text="Price" />
+                                                         <TableColumn fx:id="col_Options" prefWidth="100.0" text="Options" />
+                                                         <TableColumn fx:id="col_Bedrooms" prefWidth="75.0" text="Bedrooms" />
+                                                         <TableColumn fx:id="col_Bathrooms" prefWidth="75.0" text="Bathrooms" />
+                                                         <TableColumn fx:id="col_AreaSpace_SQFT" prefWidth="75.0" text="AreaSpace_SQFT" />
+                                                         <TableColumn fx:id="col_Status" prefWidth="75.0" text="Status" />
+                                                         <TableColumn fx:id="col_Description" prefWidth="200.0" text="Description" />
+                                                         <TableColumn fx:id="col_CardBadge" prefWidth="75.0" text="Card Badge" />
+                                                      </columns>
+                                                   </TableView>
+                                                </children>
+                                             </AnchorPane>
+                                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                                <children>
+                                                   <WebView fx:id="webview" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                </children>
+                                             </AnchorPane>
+                                          </items>
+                                       </SplitPane>
+                                       <SplitPane fx:id="splitPane_data" dividerPositions="0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8" prefHeight="160" maxHeight="160" VBox.vgrow="ALWAYS">
+                                          <items>
+                                             <AnchorPane fx:id="anchor_ForRent" minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="100.0">
+                                                <children>
+                                                   <VBox  AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                      <Label fx:id="lbl_ForRent" text="For Rent">
+                                                         <font>
+                                                            <Font name="System Bold" />
+                                                         </font>
+                                                      </Label>
+                                                      <TableView fx:id="grid_ForRent" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <columns>
+                                                            <TableColumn fx:id="col_FR_Type" prefWidth="75.0" text="Type" />
+                                                            <TableColumn fx:id="col_FR_Bathrooms" prefWidth="75.0" text="Bathrooms" />
+                                                            <TableColumn fx:id="col_FR_AreaSpace" prefWidth="75.0" text="Area Space" />
+                                                            <TableColumn fx:id="col_FR_Price" prefWidth="75.0" text="Price" />
+                                                         </columns>
+                                                      </TableView>
+                                                   </VBox>
+                                                </children>
+                                             </AnchorPane>
+                                             <AnchorPane fx:id="anchor_ForSale" minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="100.0">
+                                                <children>
+                                                   <VBox  AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                      <Label fx:id="lbl_ForSale" text="For Sale">
+                                                         <font>
+                                                            <Font name="System Bold" />
+                                                         </font>
+                                                      </Label>
+                                                      <TableView fx:id="grid_ForSale" prefHeight="140" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+                                                         <columns>
+                                                            <TableColumn fx:id="col_FS_Type" prefWidth="75.0" text="Type" />
+                                                            <TableColumn fx:id="col_FS_Bathrooms" prefWidth="75.0" text="Bathrooms" />
+                                                            <TableColumn fx:id="col_FS_AreaSpace" prefWidth="75.0" text="Area Space" />
+                                                            <TableColumn fx:id="col_FS_Price" prefWidth="75.0" text="Price" />
+                                                         </columns>
+                                                      </TableView>
+                                                   </VBox>
+                                                </children>
+                                             </AnchorPane>
+                                             <AnchorPane fx:id="anchor_School" minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="100.0">
+                                                <children>
+                                                   <VBox  AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                      <Label fx:id="lbl_School" text="Schools">
+                                                         <font>
+                                                            <Font name="System Bold" />
+                                                         </font>
+                                                      </Label>
+                                                      <TableView fx:id="grid_School" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <columns>
+                                                            <TableColumn fx:id="col_School_Name" prefWidth="75.0" text="Name" />
+                                                            <TableColumn fx:id="col_School_Grades" prefWidth="75.0" text="Grades" />
+                                                            <TableColumn fx:id="col_School_Distance" prefWidth="75.0" text="Distance" />
+                                                         </columns>
+                                                      </TableView>
+                                                   </VBox>
+                                                </children>
+                                             </AnchorPane>
+                                             <AnchorPane fx:id="anchor_KV1" minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="100.0">
+                                                <children>
+                                                   <VBox  AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                      <Label fx:id="lbl_KV1" text="">
+                                                         <font>
+                                                            <Font name="System Bold" />
+                                                         </font>
+                                                      </Label>
+                                                      <TableView fx:id="grid_KV1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <columns>
+                                                            <TableColumn fx:id="col_KV1_Key" prefWidth="75.0" text="" />
+                                                            <TableColumn fx:id="col_KV1_Value" prefWidth="75.0" text="" />
+                                                         </columns>
+                                                      </TableView>
+                                                   </VBox>
+                                                </children>
+                                             </AnchorPane>
+                                             <AnchorPane fx:id="anchor_KV2" minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="100.0">
+                                                <children>
+                                                   <VBox  AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                      <Label fx:id="lbl_KV2" text="">
+                                                         <font>
+                                                            <Font name="System Bold" />
+                                                         </font>
+                                                      </Label>
+                                                      <TableView fx:id="grid_KV2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <columns>
+                                                            <TableColumn fx:id="col_KV2_Key" prefWidth="75.0" text="" />
+                                                            <TableColumn fx:id="col_KV2_Value" prefWidth="75.0" text="" />
+                                                         </columns>
+                                                      </TableView>
+                                                   </VBox>
+                                                </children>
+                                             </AnchorPane>
+                                             <AnchorPane fx:id="anchor_KV3" minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="100.0">
+                                                <children>
+                                                   <VBox  AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                      <Label fx:id="lbl_KV3" text="">
+                                                         <font>
+                                                            <Font name="System Bold" />
+                                                         </font>
+                                                      </Label>
+                                                      <TableView fx:id="grid_KV3" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <columns>
+                                                            <TableColumn fx:id="col_KV3_Key" prefWidth="75.0" text="" />
+                                                            <TableColumn fx:id="col_KV3_Value" prefWidth="75.0" text="" />
+                                                         </columns>
+                                                      </TableView>
+                                                   </VBox>
+                                                </children>
+                                             </AnchorPane>
+                                             <AnchorPane fx:id="anchor_V1" minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="100.0">
+                                                <children>
+                                                   <VBox  AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                      <Label fx:id="lbl_V1" text="">
+                                                         <font>
+                                                            <Font name="System Bold" />
+                                                         </font>
+                                                      </Label>
+                                                      <TableView fx:id="grid_V1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <columns>
+                                                            <TableColumn fx:id="col_V1_Value" prefWidth="120.0" text="" />
+                                                         </columns>
+                                                      </TableView>
+                                                   </VBox>
+                                                </children>
+                                             </AnchorPane>
+                                             <AnchorPane fx:id="anchor_V2" minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="100.0">
+                                                <children>
+                                                   <VBox  AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                      <Label fx:id="lbl_V2" text="">
+                                                         <font>
+                                                            <Font name="System Bold" />
+                                                         </font>
+                                                      </Label>
+                                                      <TableView fx:id="grid_V2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <columns>
+                                                            <TableColumn fx:id="col_V2_Value" prefWidth="120.0" text="" />
+                                                         </columns>
+                                                      </TableView>
+                                                   </VBox>
+                                                </children>
+                                             </AnchorPane>
+                                          </items>
+                                       </SplitPane>
+                                    </children>
+                                 </VBox>
+                              </items>
+                           </SplitPane>
+                        </children>
+                     </HBox>
+                  </children>
+                  <padding>
+                     <Insets left="5.0" right="5.0" top="5.0" />
+                  </padding>
+               </VBox>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Query Data">
+         <content>
+            <AnchorPane>
+               <SplitPane dividerPositions="0.5" orientation="VERTICAL" AnchorPane.rightAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0">
+                  <items>
+                     <AnchorPane maxHeight="200">
+                        <children>
+                           <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <TextArea fx:id="txt_Query" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                              <HBox spacing="5" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                                 </padding>
+                                 <Button mnemonicParsing="false" onAction="#selectQuery" prefHeight="25.0" prefWidth="130.0" text="Run Query" visible="true">
+                                    <graphic>
+                                       <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                             <Image url="@sql.png" />
+                                          </image>
+                                       </ImageView>
+                                    </graphic>
+                                 </Button>
+                                 <Button mnemonicParsing="false" onAction="#saveTableViewInCsv" prefHeight="25.0" prefWidth="130.0" text="Save to CSV" visible="true">
+                                    <graphic>
+                                       <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                             <Image url="@save.png" />
+                                          </image>
+                                       </ImageView>
+                                    </graphic>
+                                 </Button>
+                              </HBox>
+                           </VBox>
+                        </children>
+                     </AnchorPane>
+                     <AnchorPane>
+                        <children>
+                           <TableView fx:id="grid_general" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+                           </TableView>
+                        </children>
+                     </AnchorPane>
+                  </items>
+               </SplitPane>
+            </AnchorPane>
+         </content>
+      </Tab>
+   </tabs>
+</TabPane>

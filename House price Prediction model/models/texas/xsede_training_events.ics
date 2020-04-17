@@ -1,0 +1,40 @@
+BEGIN:VCALENDAR
+PRODID:-//XSEDE training classes//iCal4j 1.0//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+DTSTAMP:20190724T172636Z
+DTSTART:20190806T150000Z
+DTEND:20190807T210000Z
+SUMMARY:XSEDE HPC Workshop Big Data - August 6-7\, 2019
+LOCATION:Tufts University\nCollaborative Learning and Innovation Complex (C
+ LIC) 316\n574 Boston Ave\nMedford\, MA 02155\n4122684960\nhttps://wikis.ui
+ t.tufts.edu/confluence/display/TuftsUITResearchComputing/XSEDE+Events
+DESCRIPTION:Site: PSC\nURL: https://www.psc.edu/\nSite contact: Tom Maiden\
+ nPhone: 4122684960\nEmail: tmaiden@psc.edu\n\nXSEDE HPC Workshop: BIG DATA
+ \nAugust 6-7\, 2019\nXSEDE along with the Pittsburgh Supercomputing Center
+  is pleased to announce a two day Big Data workshop\, to be held August 6-
+ 7\, 2019.\n\nThis workshop will focus on topics such as Hadoop and Spark a
+ nd will be presented using the Wide Area Classroom (WAC) training platform
+ .\n\nAgenda\nTuesday\, August 6\, 2019\nAll times given are Eastern\n11:00
+  Welcome\n11:25 Intro to Big Data\n12:00 Hadoop\n12:30 Intro to Spark\n1:0
+ 0	Lunch break\n2:00	Spark\n3:30	Spark Exercises\n4:30	Spark\n5:00	Adjourn\
+ n\nWednesday\, August 7\, 2019\nAll times given are Eastern\n11:00 Machine
+  Learning: Recommender System with Spark\n1:00	Lunch break\n2:00	Deep Lear
+ ning with Tensorflow\n4:30	Bridges: A Big Data Platform\n5:00	Adjourn\n\nL
+ ogistics\nDue to demand\, this workshop will be telecast to several satell
+ ite sites.\n\nYou may attend at any of the following sites.\n\n* Pittsburg
+ h Supercomputing Center\n* North Dakota State University\n* University at 
+ Albany\n* Pennsylvania State University\n* George Mason University\n* Tuft
+ s University\n* Purdue University\n* Old Dominion University\n* University
+  of Houston-Clear Lake\n* Cornell University\n* University of Delaware\n* 
+ Texas Tech University\n* University of Tennessee\, Knoxville - National In
+ stitute for Computational Sciences\n* National Center for Supercomputing A
+ pplications\n* University of Colorado Boulder\n* University of Notre Dame\
+ n* University of Houston\n* Arizona State University\n* University of Utah
+ \n* Northwestern University\n* Yale University\n* Georgia Institute of Tec
+ hnology\n* New York University\n* Jefferson Lab\n* Lawrence Berkeley Natio
+ nal Laboratory\n\nMore information: https://www.psc.edu/current-workshop
+UID:20190724T172636Z-training_uid@xsede.org
+END:VEVENT
+END:VCALENDAR

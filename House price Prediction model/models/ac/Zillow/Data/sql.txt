@@ -1,0 +1,23 @@
+select 
+
+ZPID,
+case when dealType<>null then Option.DealType else Estate.Type end as Type ,
+ZipCode,
+Locality,
+State,
+Latitude,
+Longitude,
+Estate.Status,
+Description,
+CardBadge,
+Case when Estate.price>0 then Estate.Price else Option.Price end Price ,
+Case When AreaSpace_Sqft>0 then AreaSpace_sqft else AreaSpace end AreaSpace,
+Case When AreaSpace_Sqft>0 then round(Estate.Price*10/AreaSpace_Sqft)/10 else round(Option.Price*10/AreaSpace)/10 end 'Price/sqft',
+Case When Mortgage>0 then Mortgage else OptionMortgage end Mortgage,
+Case When Mortgage>0 then CashFlow else OptionCashFlow end CashFlow
+
+from Estate left join Option on Estate.Id=Option.EstateId 
+
+where Estate.Type in ('rent','sale') and requestZipId in
+(select RequestZip.id from Request join RequestZip on Request.Id=RequestZip.RequestId
+where Request.Id in (24,25) )
